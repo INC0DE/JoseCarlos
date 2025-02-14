@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Pinyon+Script&family=Rouge+Script&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Pinyon+Script&family=Rouge+Script&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  background-color: #000;
+  color-scheme: dark;
+}
+
+* {
+  scroll-behavior: smooth;
+}
