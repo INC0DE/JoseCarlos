@@ -7,7 +7,6 @@ import { Image } from "@heroui/react";
 const Hero = () => {
   return (
     <div className="w-full min-h-screen pt-10 bg-gradient-to-br from-brown from-10% via-black via-50% to-black to-10%">
-
       <div className="absolute top-2 left-0 w-full">
         <Header />
       </div>
@@ -23,13 +22,13 @@ const Hero = () => {
           </div>
 
           <div className="flex justify-center gap-8">
-            <a href="https://www.instagram.com/incodeweb/">
+            <a href="https://www.instagram.com/josecarloscervantesmx/">
               <FaInstagram className="w-6 h-8" />
             </a>
-            <a href="https://www.instagram.com/incodeweb/">
+            <a href="https://www.facebook.com/JoseCarlosCervantesCantanteRanchero?mibextid=wwXIfr&rdid=JEdC5nhbRXdMaoNg&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F15pQ5UgASe%2F%3Fmibextid%3DwwXIfr#">
               <FaFacebook className="w-6 h-8" />
             </a>
-            <a href="https://www.instagram.com/incodeweb/">
+            <a href="https://www.tiktok.com/@josecarloscervantesmx?lang=es">
               <FaTiktok className="w-6 h-8" />
             </a>
           </div>
