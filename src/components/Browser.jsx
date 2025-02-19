@@ -15,7 +15,7 @@ const items = [
 const Browser = () => {
   const [selected, setSelected] = useState(items[0]);
   return (
-    <div id="browser" className="flex min-h-screen bg-whitelight ">
+    <div id="browser" className="flex min-h-screen bg-whitelight rounded-3xl">
       <motion.div
         key={selected.id}
         className="flex-1 flex w-3/5 items-center justify-center content-center "

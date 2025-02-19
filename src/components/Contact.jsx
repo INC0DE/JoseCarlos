@@ -1,5 +1,6 @@
 import FormContact from "./Form";
-import { Input, Button } from "@heroui/react";
+import { Input, Button , Image} from "@heroui/react";
+import {image3} from "../assets"
 
 const Contact = () => {
   return (
@@ -13,13 +14,14 @@ const Contact = () => {
         </div>
       </div>
 
-      <div className="w-1/2 content-center justify-items-center space-y-20">
+      <div className="w-1/2 content-center justify-items-center px-5 space-y-20">
         <div>
-          <h1 className="text-9xl text-yellow font-Script">Ranchero</h1>
-          <h1 className="text-4xl text-gray justify-self-end"> a tu rancho.</h1>
-        </div>
-        <div>
-          <p className="text-2xl font-Baskerville text-whitelight">La tradicion mexicana que tu evento necesita.</p>
+          <h1 className="text-5xl text-yellow font-Script">
+            "No hay tequila sin canción, ni noche sin sentimiento."
+          </h1>
+          <h1 className="text-2xl text-end font-Baskerville">
+            Jose Carlos Cervantes.
+          </h1>
         </div>
       </div>
     </div>

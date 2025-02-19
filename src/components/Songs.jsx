@@ -17,7 +17,7 @@ const Songs = () => {
   ];
 
   return (
-    <div className="w-full h-screen p-8 space-y-8 bg-black">
+    <div className="w-full h-screen p-8 space-y-8">
       <div className="flex gap-4 ">
         <input
           type="text"
@@ -44,7 +44,7 @@ const Songs = () => {
         <ul className="space-y-2 ">
           {filteredSongs.length > 0 ? (
             filteredSongs.map((song) => (
-              <li key={song.id} className="p-2 text-gray ">
+              <li key={song.id} className="p-2 text-white font-light">
                 {song.title} - <span className="text-brown font-light">{song.artist}</span>
               </li>
             ))

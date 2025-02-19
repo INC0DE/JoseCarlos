@@ -1,7 +1,7 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
 import {
   Navbar,
-  NavbarBrand,
   NavbarContent,
   NavbarItem,
   NavbarMenuToggle,
@@ -15,20 +15,35 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const menuItems = [
-    "Profile",
-    "Dashboard",
-    "Activity",
-    "Analytics",
-    "System",
-    "Deployments",
-    "My Settings",
-    "Team Settings",
-    "Help & Feedback",
-    "Log Out",
+    { label: "Sobre Mi", to: "#introduction" },
+    { label: "Experiencia", to: "#experience" },
+    { label: "Informacion", to: "#browser" },
+    { label: "Contacto", to: "#contact" },
   ];
+
+  // Animation variants for the navbar menu
+  const menuVariants = {
+    open: {
+      opacity: 1,
+      y: 0,
+      transition: { staggerChildren: 0.1, delayChildren: 0.2 },
+    },
+    closed: {
+      opacity: 0,
+      y: "-100%",
+      transition: { staggerChildren: 0.05, staggerDirection: -1 },
+    },
+  };
+
+  // Animation variants for individual menu items
+  const itemVariants = {
+    open: { opacity: 1, y: 0 },
+    closed: { opacity: 0, y: -20 },
+  };
+
   return (
     <Navbar
-      className="bg-transparent justify-end pr-12 pt-3 absolute "
+      className="bg-transparent justify-end pr-12 pt-3 absolute"
       isBlurred={false}
       position="static"
       onMenuOpenChange={setIsMenuOpen}
@@ -40,48 +55,45 @@ const Header = () => {
         />
       </NavbarContent>
 
-      <NavbarContent className="hidden sm:flex gap-20" justify="end">
-        <NavbarItem>
-          <Link className="text-whitelight" to="#introduction">
-            Sobre Mi
-          </Link>
-        </NavbarItem>
-        <NavbarItem isActive>
-          <Link className="text-whitelight" to="#experience">
-            Experiencia
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link className="text-whitelight" to="#browser">
-            Informacion
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Button as={Link} color="primary" to="#contact">
-            Conatcto
-          </Button>
-        </NavbarItem>
+      <NavbarContent className="hidden sm:flex gap-24" justify="end">
+        {menuItems.map((item, index) => (
+          <NavbarItem key={`${item.label}-${index}`}>
+            {item.label === "Contacto" ? (
+              <Button as={Link} color="primary" to={item.to}>
+                {item.label}
+              </Button>
+            ) : (
+              <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+                <Link className="text-white" to={item.to}>
+                  {item.label}
+                </Link>
+              </motion.div>
+            )}
+          </NavbarItem>
+        ))}
       </NavbarContent>
 
       <NavbarMenu>
-        {menuItems.map((item, index) => (
-          <NavbarMenuItem key={`${item}-${index}`}>
-            <Link
-              className="w-full"
-              color={
-                index === 2
-                  ? "primary"
-                  : index === menuItems.length - 1
-                  ? "danger"
-                  : "foreground"
-              }
-              href="#"
-              size="lg"
-            >
-              {item}
-            </Link>
-          </NavbarMenuItem>
-        ))}
+        <motion.div
+          initial="closed"
+          animate={isMenuOpen ? "open" : "closed"}
+          variants={menuVariants}
+          className="flex flex-col gap-4 p-4"
+        >
+          {menuItems.map((item, index) => (
+            <NavbarMenuItem key={`${item.label}-${index}`}>
+              <motion.div variants={itemVariants}>
+                <Link
+                  className="w-full text-white hover:text-primary"
+                  to={item.to}
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item.label}
+                </Link>
+              </motion.div>
+            </NavbarMenuItem>
+          ))}
+        </motion.div>
       </NavbarMenu>
     </Navbar>
   );

@@ -57,7 +57,7 @@ const Events = () => {
   return (
     <div
       ref={galleryRef}
-      className="w-full h-[100vh] overflow-y-auto scrollbar-hide bg-black p-4"
+      className="w-full h-[100vh] overflow-y-auto scrollbar-hide p-4"
     >
       <div className="columns-2 md:columns-3 gap-4 space-y-4">
         {images.map((src, index) => (

@@ -1,11 +1,11 @@
-import React from 'react'
+import React from "react";
 
 const Where = () => {
   return (
-    <div className='bg-black'> 
+    <div className="">
       <h1>Hola</h1>
     </div>
-  )
-}
+  );
+};
 
 export default Where;
