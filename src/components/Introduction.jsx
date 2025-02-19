@@ -3,7 +3,7 @@ import { Image } from "@heroui/react";
 
 const Introduction = () => {
   return (
-    <div className="flex w-full min-h-screen border-t-2 border-b-2">
+    <div id="introduction" className="flex w-full min-h-screen border-t-2 border-b-2">
       <div className="w-2/6 2xl:w-2/5">
         <Image src={hat} className="w-full h-screen object-cover" />
       </div>

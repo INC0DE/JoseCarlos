@@ -1,16 +1,11 @@
 import Header from "./Header";
 import { FaFacebook, FaInstagram, FaTiktok } from "react-icons/fa";
-import { socials } from "../constants";
 import { Josehero } from "../assets";
 import { Image } from "@heroui/react";
 
 const Hero = () => {
   return (
-    <div className="w-full min-h-screen pt-10 bg-gradient-to-br from-brown from-10% via-black via-50% to-black to-10%">
-      <div className="absolute top-2 left-0 w-full">
-        <Header />
-      </div>
-
+    <div className="w-full min-h-screen pt-14 bg-gradient-to-br from-brown from-10% via-black via-50% to-black to-10%">
       <div className="flex items-center justify-center h-screen px-20">
         <div className="w-1/2 space-y-32 ">
           <div className="space-y-4 justify-items-center">

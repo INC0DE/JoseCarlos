@@ -44,8 +44,8 @@ const Songs = () => {
         <ul className="space-y-2 ">
           {filteredSongs.length > 0 ? (
             filteredSongs.map((song) => (
-              <li key={song.id} className="p-2 text-white">
-                {song.title} - <span className="text-yellow">{song.artist}</span>
+              <li key={song.id} className="p-2 text-gray ">
+                {song.title} - <span className="text-brown font-light">{song.artist}</span>
               </li>
             ))
           ) : (

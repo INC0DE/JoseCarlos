@@ -4,7 +4,7 @@ import Timeline from "./Timeline";
 
 const Experience = () => {
   return (
-    <div className="">
+    <div id="experience" className="">
       <div className="w-96 h-min mt-5 justify-self-center content-center space-y-5">
         <h1 className="text-5xl text-gray self-start font-medium">
           El recorrido de un

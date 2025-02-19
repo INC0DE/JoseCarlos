@@ -7,9 +7,9 @@ import {
   NavbarMenuToggle,
   NavbarMenu,
   NavbarMenuItem,
-  Link,
   Button,
 } from "@heroui/react";
+import { HashLink as Link } from "react-router-hash-link";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -28,7 +28,7 @@ const Header = () => {
   ];
   return (
     <Navbar
-      className="bg-transparent justify-end pr-12"
+      className="bg-transparent justify-end pr-12 pt-3 absolute "
       isBlurred={false}
       position="static"
       onMenuOpenChange={setIsMenuOpen}
@@ -42,22 +42,22 @@ const Header = () => {
 
       <NavbarContent className="hidden sm:flex gap-20" justify="end">
         <NavbarItem>
-          <Link color="foreground" href="#">
+          <Link className="text-whitelight" to="#introduction">
             Sobre Mi
           </Link>
         </NavbarItem>
         <NavbarItem isActive>
-          <Link aria-current="page" href="#">
+          <Link className="text-whitelight" to="#experience">
             Experiencia
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="#">
+          <Link className="text-whitelight" to="#browser">
             Informacion
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Button as={Link} color="primary" href="#" >
+          <Button as={Link} color="primary" to="#contact">
             Conatcto
           </Button>
         </NavbarItem>

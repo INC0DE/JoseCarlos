@@ -3,7 +3,7 @@ import { Input, Button } from "@heroui/react";
 
 const Contact = () => {
   return (
-    <div className="flex w-full min-h-screen  rounded-3xl">
+    <div id="contact" className="flex w-full min-h-screen  rounded-3xl">
       <div className="w-1/2 content-center justify-items-center space-y-20">
         <h1 className="text-2xl text-gray">
           ¡Contactame y celebremos un gran evento!
