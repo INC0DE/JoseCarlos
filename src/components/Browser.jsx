@@ -6,14 +6,15 @@ import Where from "./Where";
 import Socials from "./Socials";
 
 const items = [
-  { id: 1, title: "Eventos", content: <Events />, size:"text-2xl" },
-  { id: 2, title: "Canciones", content: <Songs />, size:"text-2xl" },
-  { id: 3, title: "Lugares", content: <Where />, size:"text-3xl" },
-  { id: 4, title: "Redes", content: <Socials />, size:"text-4xl" },
+  { id: 1, title: "Canciones", content: <Songs />, size: "text-8xl" },
+  { id: 2, title: "Eventos", content: <Events />, size: "text-8xl" },
+  { id: 3, title: "Redes", content: <Socials />, size: "text-8xl" },
+  { id: 4, title: "Lugar", content: <Where />, size: "text-8xl" },
 ];
 
 const Browser = () => {
   const [selected, setSelected] = useState(items[0]);
+
   return (
     <div id="browser" className="flex min-h-screen bg-whitelight rounded-3xl">
       <motion.div
@@ -33,10 +34,9 @@ const Browser = () => {
           <button
             key={item.id}
             onClick={() => setSelected(item)}
-            className={`text-8xl font-bold transition ${
+            className={`font-bold transition ${item.size} ${
               selected.id === item.id ? "text-white" : "text-black"
             }`}
-            
           >
             {item.title}.
           </button>
