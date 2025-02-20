@@ -8,8 +8,8 @@ import Socials from "./Socials";
 const items = [
   { id: 1, title: "Canciones", content: <Songs /> },
   { id: 2, title: "Eventos", content: <Events /> },
-  { id: 3, title: "Redes", content: <Socials /> },
-  { id: 4, title: "Lugar", content: <Where /> },
+  { id: 3, title: "¿Dónde?", content: <Where /> },
+  { id: 4, title: "Redes", content: <Socials /> },
 ];
 
 const Browser = () => {
