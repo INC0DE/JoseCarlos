@@ -19,7 +19,6 @@ const Songs = () => {
 
   return (
     <div className="w-full h-screen p-6 space-y-6">
-      {/* Barra de búsqueda y filtro */}
       <div className="flex flex-col-reverse sm:flex-row gap-4">
         <input
           type="text"
@@ -42,7 +41,6 @@ const Songs = () => {
         </select>
       </div>
 
-      {/* Lista de canciones */}
       <div className="max-h-[75vh] overflow-y-auto scrollbar-hide">
         <ul className="space-y-2">
           {filteredSongs.length > 0 ? (
@@ -51,8 +49,7 @@ const Songs = () => {
                 key={song.id}
                 className="p-3 text-white rounded-lg shadow-md transition-all duration-200 hover:bg-gray-700"
               >
-                {song.title} -{" "}
-                <span className="text-brown">{song.artist}</span>
+                {song.title} - <span className="text-brown">{song.artist}</span>
               </li>
             ))
           ) : (

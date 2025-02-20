@@ -21,32 +21,11 @@ const Header = () => {
     { label: "Contacto", to: "#contact" },
   ];
 
-  // Animation variants for the navbar menu
-  const menuVariants = {
-    open: {
-      opacity: 1,
-      y: 0,
-      transition: { staggerChildren: 0.1, delayChildren: 0.2 },
-    },
-    closed: {
-      opacity: 0,
-      y: "-100%",
-      transition: { staggerChildren: 0.05, staggerDirection: -1 },
-    },
-  };
-
-  // Animation variants for individual menu items
-  const itemVariants = {
-    open: { opacity: 1, y: 0 },
-    closed: { opacity: 0, y: -20 },
-  };
-
   return (
     <Navbar
       className="bg-transparent justify-end pr-12 pt-3 absolute"
       isBlurred={false}
     >
-
       <NavbarContent className="hidden sm:flex gap-24" justify="end">
         {menuItems.map((item, index) => (
           <NavbarItem key={`${item.label}-${index}`}>

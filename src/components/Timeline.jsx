@@ -53,7 +53,6 @@ const Timeline = () => {
               viewport={{ once: false, amount: 0.3 }}
               transition={{ duration: 0.8, delay: index * 0.3 }}
             >
-              {/* Imagen */}
               <div className="w-full md:w-1/3 flex justify-center relative">
                 <motion.img
                   src={item.image}
@@ -63,7 +62,6 @@ const Timeline = () => {
                 <div className="absolute inset-0 bg-black opacity-40 rounded-lg"></div>
               </div>
 
-              {/* Texto */}
               <div className="w-full md:w-2/3 px-4 text-center md:text-left">
                 <h2 className="text-3xl sm:text-4xl font-semibold text-yellow">
                   {item.year}

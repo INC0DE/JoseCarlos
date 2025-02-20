@@ -1,26 +1,5 @@
 import { FaFacebook, FaInstagramSquare, FaTiktok } from "react-icons/fa";
 
-export const socials = [
-  {
-    id: "1",
-    title: "Instagram",
-    icon: FaInstagramSquare,
-    url: "https://www.instagram.com/incodeweb/",
-  },
-  {
-    id: "2",
-    title: "Facebook",
-    icon: FaFacebook,
-    url: "https://www.facebook.com/profile.php?id=61566862540608&mibextid=LQQJ4d",
-  },
-  {
-    id: "3",
-    title: "TikTok",
-    icon: FaTiktok,
-    url: "https://www.facebook.com/profile.php?id=61566862540608&mibextid=LQQJ4d",
-  },
-];
-
 export const repertorio = [
   { id: 1, title: "A pesar de todo", artist: "Alejandro Fernández" },
   { id: 2, title: "A una señora", artist: "Alejandro Fernández" },
