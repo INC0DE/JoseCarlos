@@ -2,43 +2,41 @@ import { FaFacebook, FaInstagram, FaTiktok } from "react-icons/fa";
 
 const Socials = () => {
   return (
-    <div className="w-full h-screen flex flex-col space-y-6 p-5 justify-center">
+    <div className="w-full h-screen justify-items-center space-y-4 lg:content-center gap-10 p-6">
+      {/** Tarjeta de Instagram */}
       <a
         href="https://www.instagram.com/josecarloscervantesmx/"
-        className="flex items-center group relative w-72 h-52 bg-black p-6 rounded-lg shadow-lg transition-all duration-300 hover:bg-white"
+        aria-label="Instagram de Jose Carlos Cervantes"
+        className="flex items-center gap-4 w-64 h-52 bg-black p-6 rounded-lg shadow-lg transition-all duration-300 hover:bg-white hover:scale-105 lg:w-72"
       >
-        <FaInstagram color="#e95950" className="w-20 h-10" />
-
-        <div>
-          <h1 className="text-3xl font-bold text-gray group-hover:text-black">
-            Instagram
-          </h1>
-        </div>
+        <FaInstagram className="w-16 h-16 text-[#e95950]" />
+        <h1 className="text-3xl font-bold text-gray group-hover:text-black">
+          Instagram
+        </h1>
       </a>
 
+      {/** Tarjeta de Facebook */}
       <a
-        href="https://www.facebook.com/JoseCarlosCervantesCantanteRanchero?mibextid=wwXIfr&rdid=JEdC5nhbRXdMaoNg&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F15pQ5UgASe%2F%3Fmibextid%3DwwXIfr#"
-        className="flex items-center group relative w-72 h-52 self-center bg-black p-6 rounded-lg shadow-lg transition-all duration-300 hover:bg-white"
+        href="https://www.facebook.com/JoseCarlosCervantesCantanteRanchero"
+        aria-label="Facebook de Jose Carlos Cervantes"
+        className="flex items-center gap-4 w-64 h-52 bg-black p-6 rounded-lg shadow-lg transition-all duration-300 hover:bg-white hover:scale-105 lg:w-72 "
       >
-        <FaFacebook color="blue" className="w-20 h-10" />
-
-        <div className="">
-          <h3 className="text-3xl font-bold text-gray group-hover:text-black">
-            Facebook
-          </h3>
-        </div>
+        <FaFacebook className="w-16 h-16 text-blue" />
+        <h3 className="text-3xl font-bold text-gray group-hover:text-black">
+          Facebook
+        </h3>
       </a>
 
+      {/** Tarjeta de TikTok */}
       <a
-        href="https://www.tiktok.com/@josecarloscervantesmx?lang=es"
-        className="flex justify-items-center items-center group relative w-72 h-52 self-end bg-black p-6 rounded-lg shadow-lg transition-all duration-300 hover:bg-white"
+        href="https://www.tiktok.com/@josecarloscervantesmx"
+        aria-label="TikTok de Jose Carlos Cervantes"
+        className="flex items-center gap-4 w-64 h-52 bg-black p-6 rounded-lg shadow-lg transition-all duration-300 hover:bg-white hover:scale-105 lg:w-72"
       >
-        <FaTiktok color=" #ff0050" className="w-20 h-10" />
-        <div className="">
-          <h3 className="text-3xl font-bold text-gray group-hover:text-black">
-            TikTok
-          </h3>
-        </div>
+        <FaTiktok className="w-16 h-16 text-[#ff0050]" />
+        <h3 className="text-3xl font-bold text-gray group-hover:text-black">
+          TikTok
+        </h3>
       </a>
     </div>
   );

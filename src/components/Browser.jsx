@@ -6,36 +6,38 @@ import Where from "./Where";
 import Socials from "./Socials";
 
 const items = [
-  { id: 1, title: "Canciones", content: <Songs />, size: "text-8xl" },
-  { id: 2, title: "Eventos", content: <Events />, size: "text-8xl" },
-  { id: 3, title: "Redes", content: <Socials />, size: "text-8xl" },
-  { id: 4, title: "Lugar", content: <Where />, size: "text-8xl" },
+  { id: 1, title: "Canciones", content: <Songs /> },
+  { id: 2, title: "Eventos", content: <Events /> },
+  { id: 3, title: "Redes", content: <Socials /> },
+  { id: 4, title: "Lugar", content: <Where /> },
 ];
 
 const Browser = () => {
   const [selected, setSelected] = useState(items[0]);
 
   return (
-    <div id="browser" className="flex min-h-screen bg-whitelight rounded-3xl">
+    <div className="min-h-screen bg-whitelight rounded-3xl flex flex-col lg:flex-row items-center justify-center p-6 lg:p-12 gap-6">
       <motion.div
         key={selected.id}
-        className="flex-1 flex w-3/5 items-center justify-center content-center "
+        className="flex-1 w-full lg:w-1/2 flex items-center justify-center"
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.3 }}
+        transition={{ duration: 0.4 }}
       >
         <motion.div className="text-xl font-bold w-full h-full text-white">
           {selected.content}
         </motion.div>
       </motion.div>
 
-      <div className="w-2/5 flex flex-col gap-6 justify-center">
+      <div className="w-full lg:w-1/2 flex flex-col items-center lg:gap-4">
         {items.map((item) => (
           <button
             key={item.id}
             onClick={() => setSelected(item)}
-            className={`font-bold transition ${item.size} ${
-              selected.id === item.id ? "text-white" : "text-black"
+            className={`text-5xl lg:text-8xl font-bold transition-all duration-300 ${
+              selected.id === item.id
+                ? "text-white bg-black px-4 py-2 rounded-xl shadow-lg"
+                : "text-brown hover:text-black"
             }`}
           >
             {item.title}.
