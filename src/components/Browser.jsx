@@ -16,7 +16,7 @@ const Browser = () => {
   const [selected, setSelected] = useState(items[0]);
 
   return (
-    <div className="min-h-screen bg-whitelight rounded-3xl flex flex-col lg:flex-row items-center justify-center p-6 lg:p-12 gap-6">
+    <div className="min-h-screen bg-whitelight rounded-3xl flex flex-col-reverse lg:flex-row items-center justify-center p-6 lg:p-12 gap-6">
       <motion.div
         key={selected.id}
         className="flex-1 w-full lg:w-1/2 flex items-center justify-center"

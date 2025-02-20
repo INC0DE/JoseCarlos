@@ -20,7 +20,7 @@ const Songs = () => {
   return (
     <div className="w-full h-screen p-6 space-y-6">
       {/* Barra de búsqueda y filtro */}
-      <div className="flex flex-col sm:flex-row gap-4">
+      <div className="flex flex-col-reverse sm:flex-row gap-4">
         <input
           type="text"
           placeholder="Buscar canción..."
@@ -43,7 +43,7 @@ const Songs = () => {
       </div>
 
       {/* Lista de canciones */}
-      <div className="max-h-[85vh] overflow-y-auto scrollbar-hide">
+      <div className="max-h-[75vh] overflow-y-auto scrollbar-hide">
         <ul className="space-y-2">
           {filteredSongs.length > 0 ? (
             filteredSongs.map((song) => (

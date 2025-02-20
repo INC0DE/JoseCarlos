@@ -45,15 +45,7 @@ const Header = () => {
     <Navbar
       className="bg-transparent justify-end pr-12 pt-3 absolute"
       isBlurred={false}
-      position="static"
-      onMenuOpenChange={setIsMenuOpen}
     >
-      <NavbarContent>
-        <NavbarMenuToggle
-          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-          className="sm:hidden"
-        />
-      </NavbarContent>
 
       <NavbarContent className="hidden sm:flex gap-24" justify="end">
         {menuItems.map((item, index) => (
@@ -72,29 +64,6 @@ const Header = () => {
           </NavbarItem>
         ))}
       </NavbarContent>
-
-      <NavbarMenu>
-        <motion.div
-          initial="closed"
-          animate={isMenuOpen ? "open" : "closed"}
-          variants={menuVariants}
-          className="flex flex-col gap-4 p-4"
-        >
-          {menuItems.map((item, index) => (
-            <NavbarMenuItem key={`${item.label}-${index}`}>
-              <motion.div variants={itemVariants}>
-                <Link
-                  className="w-full text-white hover:text-primary"
-                  to={item.to}
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {item.label}
-                </Link>
-              </motion.div>
-            </NavbarMenuItem>
-          ))}
-        </motion.div>
-      </NavbarMenu>
     </Navbar>
   );
 };
