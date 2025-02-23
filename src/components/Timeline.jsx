@@ -51,7 +51,7 @@ const Timeline = () => {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: false, amount: 0.3 }}
-              transition={{ duration: 0.8, delay: index * 0.3 }}
+              transition={{ duration: 0.5, delay: index * 0.3 }}
             >
               <div className="w-full md:w-1/3 flex justify-center relative">
                 <motion.img

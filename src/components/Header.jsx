@@ -35,7 +35,7 @@ const Header = () => {
               </Button>
             ) : (
               <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-                <Link className="text-white" to={item.to}>
+                <Link className="text-white hover:text-yellow" to={item.to}>
                   {item.label}
                 </Link>
               </motion.div>

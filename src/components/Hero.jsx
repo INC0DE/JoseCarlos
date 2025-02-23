@@ -21,21 +21,21 @@ const Hero = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaInstagram className="w-6 h-6 md:w-8 md:h-8 text-white transition-transform transform hover:scale-110" />
+            <FaInstagram className="w-6 h-6 md:w-7 md:h-7 text-white transition-transform transform hover:scale-110" />
           </a>
           <a
             href="https://www.facebook.com/JoseCarlosCervantesCantanteRanchero"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaFacebook className="w-6 h-6 md:w-8 md:h-8 text-white transition-transform transform hover:scale-110" />
+            <FaFacebook className="w-6 h-6 md:w-7 md:h-7 text-white transition-transform transform hover:scale-110" />
           </a>
           <a
             href="https://www.tiktok.com/@josecarloscervantesmx?lang=es"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaTiktok className="w-6 h-6 md:w-8 md:h-8 text-white transition-transform transform hover:scale-110" />
+            <FaTiktok className="w-6 h-6 md:w-7 md:h-7 text-white transition-transform transform hover:scale-110" />
           </a>
         </div>
       </div>

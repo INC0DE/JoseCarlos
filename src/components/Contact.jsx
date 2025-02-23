@@ -1,6 +1,5 @@
 import FormContact from "./Form";
-import { Image } from "@heroui/react";
-import { image3 } from "../assets";
+
 
 const Contact = () => {
   return (
