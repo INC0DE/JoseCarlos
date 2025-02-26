@@ -1,20 +1,35 @@
-import { useState } from "react";
-import { Form, Input, Button,  Textarea  } from "@heroui/react";
+import React, { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
+import { Form, Input, Button, Textarea } from "@heroui/react";
 
 const FormContact = () => {
-  const [action, setAction] = useState(null);
+  const form = useRef();
+  const [success, setSuccess] = useState(false);
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm("service_eshq1mq", "template_i8nv48k", form.current, {
+        publicKey: "uViG1V13b8DoGq2Qw",
+      })
+      .then(
+        () => {
+          setSuccess("SUCCESS!");
+          form.current.reset();
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      );
+  };
   return (
     <div className="w-full">
       <Form
         className="flex flex-col gap-10"
+        ref={form}
+        onSubmit={sendEmail}
         validationBehavior="native"
-        onReset={() => setAction("reset")}
-        onSubmit={(e) => {
-          e.preventDefault();
-          let data = Object.fromEntries(new FormData(e.currentTarget));
-
-          setAction(`submit ${JSON.stringify(data)}`);
-        }}
       >
         <Input
           isRequired
@@ -53,24 +68,24 @@ const FormContact = () => {
           size="lg"
           errorMessage="Please enter a valid email"
           label="Lugar, descripción."
-          name="email"
+          name="description"
           placeholder="Describe el evento."
           type="email"
         />
         <div className="flex gap-2 w-full justify-center">
-          <Button color="primary" type="submit" size="lg">
+          <Button color="primary" type="submit">
             Subir
           </Button>
-          <Button type="reset" variant="flat" size="lg">
+          <Button type="reset" variant="flat" value="Send">
             Cancelar
           </Button>
         </div>
-        {action && (
-          <div className="text-small text-default-500">
-            Action: <code>{action}</code>
-          </div>
-        )}
       </Form>
+      {success && (
+        <p className="text-green justify-self-center mt-5">
+          ¡Formulario enviado con éxito!
+        </p>
+      )}
     </div>
   );
 };
