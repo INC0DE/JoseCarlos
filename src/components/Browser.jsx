@@ -29,7 +29,7 @@ const Browser = () => {
         </motion.div>
       </motion.div>
 
-      <div className="w-full lg:w-1/2 flex flex-col items-center lg:gap-4">
+      <div className="w-full lg:w-1/2 flex flex-col items-center gap-2 lg:gap-4">
         {items.map((item) => (
           <button
             key={item.id}

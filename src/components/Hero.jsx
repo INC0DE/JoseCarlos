@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <div className="w-full min-h-screen flex flex-col lg:flex-row items-center justify-center bg-gradient-to-br from-brown via-black to-black pt-24 lg:pt-12">
       <div className="text-center justify-items-center lg:text-left space-y-5 px-6 lg:px-12 lg:w-1/2">
-        <h1 className="text-yellow font-Script text-7xl md:text-9xl">
+        <h1 className="text-yellow font-Script text-7xl lg:text-8xl xl:text-9xl">
           Jose Carlos
         </h1>
         <h2 className="text-whitelight font-Baskerville text-[clamp(2rem,4vw,4rem)]">
